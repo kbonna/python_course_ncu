@@ -113,4 +113,39 @@ Write down all possible and unique ways to call function `fun` to produce output
 
 # 5. Lists
 
-**5.1.** 
+**5.1.** Ask user to name three vegetables. If `'carrot'` is among them print the list replicated two times. Othewise print the list with `'carrot'` added three more times.
+
+**5.2.** Create function `ski_jump_score(judges_points, distance, k_point)` which calulates and returns total number of points that ski jumper is awarded for his jump. Briefly, total score is score for distance (`1.8 * (distance - k_point)`) plus score from judges points (highest and lowest score is discarded and the sum is calculated) plus initial number of 60 points. You can read more [here](https://en.wikipedia.org/wiki/Ski_jumping). Assume default value for `k_point = 120`.
+
+Example:
+```
+> ski_jump_score([17, 15, 18, 17, 19], 126)
+> 122.8
+```
+
+**5.3.** Write a script that asks the user to input shopping information: product names and product prices. User can specify as many products as he wants. Function should print (nicely formatted) aggregated informations about the products.
+
+Running script should first prompt user for products:
+```
+> Product 1 name: 
+> Bread 
+> Product 1 price:
+> 3
+> Product 2 name (ENTER to skip):
+> Ham
+> Product 2 price:
+> 5
+> Product 3 name (ENTER to skip):
+> Pepsi
+> Product 3 price: 
+> 5.50
+> Product 4 name (ENTE to skip):
+> 
+```
+
+And then output statistics:
+```
+Cheapest...........................Bread
+Most expensive.....................Pepsi
+Avg. price..........................4.17
+``` 
