@@ -1,3 +1,18 @@
+# How to send your homework?
+
+1. Create solutions for your tasks.
+2. Put each solution in separate python file named `<homework_number>_<task_number>.py`. For example solution for the task **3.1.** should be placed in a file `3_1.py`. If you are working with Jupyter, don't worry – after creating solutions just copy them into new files with a proper name.
+3. Put all of your solutions in the folder named with your index number. For example, if your University index number is *333444*, folder should be named `333444`. 
+4. Compress your files using zip extension (without password protection). Finally your file should be `333444.zip`.
+
+For example if your index is *333444* and you are sending solutions for the first homework your files should have structure (after unzipping `333444.zip`):
+```
+333444
+├── 1_1.py
+├── 1_2.py
+└── 1_3.py
+```
+
 # Homework 1.
 
 **1.1.** Write a script (or function) that takes as an input two numbers `width` and `height` and prints a rectangle with specified size.
@@ -116,3 +131,38 @@ Examples:
 - input `aaa` should be transformed into an empty string
 
 > Consider only inputs consisting of lowercase and uppercase ascii letters (a-z) and (A-Z)
+
+# Homework 3.
+
+**3.1.** Write a function `coins(value)` which calculate coin combinations for a given value (amount of gr). For example if we want to pay 62gr, we have to prepare 1 x 50gr coin, 1 x 10gr coin and 1 x 2gr coin. Function should return a list with 6 elements: 1st element corresponding to the number of 50gr coins, 2nd element corresponding to the number of 20gr coins, and so on up to 6th element corresponding to the number of 1gr coins.
+
+In this example function `coins(62)` should output `[1, 0, 1, 0, 1, 0]` because we have 1 x 50gr, 0 x 20gr, 1 x 10gr, 0 x 5gr, 1 x 2gr and 0 x 1gr.
+
+More examples:
+```
+coins(70) # should return [1, 1, 0, 0, 0, 0]
+coins(3) # should return [0, 0, 0, 0, 1. 1]
+```
+
+> `value` will be an integer between 0 and 99
+
+**3.2.** 
+
+Imagine you are a secret agent and receive secret messages from your agency. Secret message is a string of random-looking characters like `kj4656%cwj4342dm`. Your job is to determine if you should change your location based on the secret message. If the first instance letter "c" in the string is immediately followed with the number "01" (operational code for changing location) you should change your location. Write a function `decipher(secret_string)` which returns either `True` or `False` based on the decision if you should change your location.
+
+Examples:
+```
+decipher('qweqw34%c013fewca') # should return True, because first occurance of 'c' is followed by '01'
+decipher('qceqw34%c013fewca') # should return False, because first occurance of 'c' is followed by 'eq'
+decipher('sdwe6t544^d&fda65') # should return False, because there is no 'c' in secret string
+```
+
+# Homework 4.
+
+**4.1.**  You are given an array of positive ints where every element appears two times, except one that appears only once (let's call it x) and one that appears three times (let's call it y).
+
+Your task is to write function `appear(array)` that takes list `array` as an input and returns x * x * y.
+
+**4.2.** ...
+
+**4.3.** ...
