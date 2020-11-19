@@ -159,10 +159,51 @@ decipher('sdwe6t544^d&fda65') # should return False, because there is no 'c' in 
 
 # Homework 4.
 
-**4.1.**  You are given an array of positive ints where every element appears two times, except one that appears only once (let's call it x) and one that appears three times (let's call it y).
+**4.1.** Write a function `moving_average(array, n)` that takes two inputs: `array` which is a list of numbers and `n` which is an integer. Return new list with values being a moving average with window size `n`. Moving average is an average calculated on `n` subsequent elements. For example:
+```
+array = [2, 2, 4, 5, 2]
+n = 3 # window size
+```
+In this case moving average can be calculated as:
+```
+2, 2, 4, 5, 2
+|     |
+^^^^^^^
+(2+2+4)/3 = 2.67
+
+
+2, 2, 4, 5, 2
+   |     |
+   ^^^^^^^
+   (2+4+5)/3 = 3.67
+
+
+2, 2, 4, 5, 2
+      |     |
+      ^^^^^^^
+      (4+5+2)/3 = 3.67
+```
+so the function should oputut `[2.67, 3.67, 3.67]`.
+
+In the cases when moving average cannot be calculated, e.g. when `n` > `len(array)`, return `None`.  
+
+**4.2.** The dragon's curve is a self-similar fractal which can be obtained by a recursive method.
+
+Starting with the initial string 'Fa', at each step simultaneously perform the following operations:
+- first replace `'a'` with: `'aRbFR'`
+- then replace `'b'` with: `'LFaLb'`
+
+This operations transforms the string `'Fa'` into `'FaRbFR'` at first iteration, and string `'FaRbFR'` into `'FaRbFRRLFaLbFR'` at second iteration (and so on). After desired number of iterations, remove letters `'a'` and `'b'` from the output string. You will have a string with only `'R'`, `'L'`, and `'F'`. The goal of this task is to write a function `dragon(n)` wich takes one parameter `n`, the number of iterations needed and return the string of instruction as defined above. 
+
+Examples:
+- `dragon(0)` should return `'F'`
+- `dragon(1)` should return `'FRFR'`
+- `dragon(2)` should return `'FRFRRLFLFR'`
+
+> *Additional note*: Output string is a set of instruction. Starting at the origin of a grid looking in the (0, 1) direction, 'F' means a step forward, 'L' and 'R' mean respectively turn left and right. After executing all instructions, the trajectory will give a beautifull self-replicating pattern called [Dragon Curve](https://en.wikipedia.org/wiki/Dragon_curve).
+
+# Homework 5.
+
+**5.1.**  You are given an array of positive ints where every element appears two times, except one that appears only once (let's call it x) and one that appears three times (let's call it y).
 
 Your task is to write function `appear(array)` that takes list `array` as an input and returns x * x * y.
-
-**4.2.** ...
-
-**4.3.** ...

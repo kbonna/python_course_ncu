@@ -149,3 +149,41 @@ Cheapest...........................Bread
 Most expensive.....................Pepsi
 Avg. price..........................4.17
 ``` 
+
+**5.4.** Solve Kata (7 kyu): [Maximum Product](https://www.codewars.com/kata/5a4138acf28b82aa43000117/train/python)
+
+Given an array of integers, find the maximum product obtained from multiplying 2 adjacent numbers in the array.
+
+Example:
+
+```
+adjacent_element_product([9, 5, 10, 2, 24, -1, -48]) # should return 50
+```
+
+**5.5.** Solve Kata (7 kyu): [Row Weights](https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9/train/python)
+
+Several people are standing in a row divided into two teams. The first person goes into team 1, the second goes into team 2, the third goes into team 1, and so on.
+
+Given an array of positive integers (the weights of the people), return a new array / tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
+
+Example:
+
+```
+row_weights([50, 60, 70, 80]) # should return (120, 140)
+```
+
+**5.6.** Solve Kata (7 kyu): [Peak array index](https://www.codewars.com/kata/5a61a846cadebf9738000076)
+
+Given an array of ints, return the index such that the sum of the elements to the right of that index equals the sum of the elements to the left of that index. If there is no such index, return -1. If there is more than one such index, return the left-most index.
+
+Example:
+
+```
+peak([1, 2, 3, 5, 3, 2, 1]) # should return 3, because 1+2+3 = 3+2+1
+peak([1, 12, 3, 3, 6, 3, 1]) # should return 2, because 1+12 = 3+6+3+1
+peak([10, 20, 30, 40]) # should return -1
+```
+
+# 6. Variables revisited
+
+**6.1.** Write a function `rotate(vector, angle)` that takes two parameters: `vector` which is tuple with 2 floats, and angle (in degrees) and returns coordinates of rotated vector. [Here](https://matthew-brett.github.io/teaching/rotation_2d.html) you can find formula for 2D rotation. Set default value of 0 degrees for angle parameter. 
