@@ -169,38 +169,57 @@ In this case moving average can be calculated as:
 2, 2, 4, 5, 2
 |     |
 ^^^^^^^
-(2+2+4)/3 = 2.67
+(2+2+4)/3 = 2.6666666666666665
 
 
 2, 2, 4, 5, 2
    |     |
    ^^^^^^^
-   (2+4+5)/3 = 3.67
+   (2+4+5)/3 = 3.6666666666666665
 
 
 2, 2, 4, 5, 2
       |     |
       ^^^^^^^
-      (4+5+2)/3 = 3.67
+      (4+5+2)/3 = 3.6666666666666665
 ```
-so the function should oputut `[2.67, 3.67, 3.67]`.
+so the function should oputut `[2.6666666666666665, 3.6666666666666665, 3.6666666666666665]`.
 
 In the cases when moving average cannot be calculated, e.g. when `n` > `len(array)`, return `None`.  
+
+You may need these:
+
+If `l` is our list, then:
+- `sum(l)` returns the sum of all numbers in the list
+- `len(l)` returns the length of the list
+- `l.append(value)` adds new value to the end of the list
+- `l[i:j]` returns sub-list from index i to index j (list slicing)
+
+[Additional reading](https://railsware.com/blog/python-for-machine-learning-indexing-and-slicing-for-lists-tuples-strings-and-other-sequential-types/) about basic list operations.
 
 **4.2.** The dragon's curve is a self-similar fractal which can be obtained by a recursive method.
 
 Starting with the initial string 'Fa', at each step simultaneously perform the following operations:
-- first replace `'a'` with: `'aRbFR'`
-- then replace `'b'` with: `'LFaLb'`
+- replace `'a'` with: `'aRbFR'` 
+- replace `'b'` with: `'LFaLb'`
 
-This operations transforms the string `'Fa'` into `'FaRbFR'` at first iteration, and string `'FaRbFR'` into `'FaRbFRRLFaLbFR'` at second iteration (and so on). After desired number of iterations, remove letters `'a'` and `'b'` from the output string. You will have a string with only `'R'`, `'L'`, and `'F'`. The goal of this task is to write a function `dragon(n)` wich takes one parameter `n`, the number of iterations needed and return the string of instruction as defined above. 
+This operations transforms the string (spaces were added to increase visibility):
+- 1st iteration: `'Fa'` into `'F aRbFR '` (we don't replace `'b'` here, because `'b'` is not in `'Fa'`)
+- 2nd iteration: `'FaRbFR'` into `'F aRbF R RLFaLb FR'` at second iteration 
+- 3rd iteration: `'FaRbFRRLFaLbFR'` into `'F aRbFR R LFaLb FRRLF aRbFR L LFaLb FR'` 
+- and so on...
+
+After desired number of iterations, remove letters `'a'` and `'b'` from the output string. You will have a string with only `'R'`, `'L'`, and `'F'`. The goal of this task is to write a function `dragon(n)` wich takes one parameter `n`, the number of iterations needed and return the string of instruction as defined above. 
 
 Examples:
 - `dragon(0)` should return `'F'`
 - `dragon(1)` should return `'FRFR'`
 - `dragon(2)` should return `'FRFRRLFLFR'`
+- `dragon(3)` should return `'FRFRRLFLFRRLFRFRLLFLFR'`
 
 > *Additional note*: Output string is a set of instruction. Starting at the origin of a grid looking in the (0, 1) direction, 'F' means a step forward, 'L' and 'R' mean respectively turn left and right. After executing all instructions, the trajectory will give a beautifull self-replicating pattern called [Dragon Curve](https://en.wikipedia.org/wiki/Dragon_curve).
+
+> *Tip*: String [method](https://www.w3schools.com/python/ref_string_replace.asp) `replace` might be useful for this exercise.
 
 # Homework 5.
 
