@@ -223,6 +223,41 @@ Examples:
 
 # Homework 5.
 
-**5.1.**  You are given an array of positive ints where every element appears two times, except one that appears only once (let's call it x) and one that appears three times (let's call it y).
+**5.1.**  Create a function `only_homogenous(array)` that takes as an input a list (`array`) of lists and return a new list containing only lists from the original list (`array`) that are homogenous (all items within a list have same type). We assume that empty lists are not homogenous. The result should contain lists with items in the same order as they were originally.
 
-Your task is to write function `appear(array)` that takes list `array` as an input and returns x * x * y.
+Example:
+
+```
+array = [[1, 2, 3], [1, '2'], [], ['a', '', 'ggg'], [1, 'f'], [2]]
+only_homogenous(array) # should return [[1, 2, 3], ['a', '', 'ggg'], [2]]
+                       # sub-lists [1, '2'], [] and [1, 'f'] should be discarded as they are not homogenous
+```
+For simplicty we will asume that lists will contain only integers and strings.
+
+You may need:
+
+- `isinstance(variable, int)` checks if a `variable` is an integer (works the same for `str`)
+- `type(a) == type(b)` checks whether variables `a` and `b` are of the same type
+
+> *Original array should not be modified*
+
+**5.2.** Create a function `who_win(array)` that takes as an input 2D 3x3 array (represented as a list of lists) which corresponds to the board after the game of tic-tac-toe. Function should determine if the game was won by the player with `x` mark, `o` mark or ended as a draw. Example boards:
+
+```
+board_1 = [['o', ' ', ' '],
+           ['x', 'x', 'x'],
+           [' ', 'o', ' ']]] # here 'x' wins
+board_2 = [['o', ' ', ' '],
+           ['x', 'o', 'x'],
+           [' ', 'x', 'o']]] # here 'o' wins
+board_3 = [['x', 'x', 'o'],
+           ['o', 'x', 'x'],
+           ['x', 'o', 'o']]] # here there is a draw         
+```
+
+For these inputs function should work like this:
+```
+who_win(board_1) # should return 'x'
+who_win(board_2) # should return 'o'
+who_win(board_3) # should return 'd' because there was a draw
+```
