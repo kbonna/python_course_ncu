@@ -261,3 +261,12 @@ who_win(board_1) # should return 'x'
 who_win(board_2) # should return 'o'
 who_win(board_3) # should return 'd' because there was a draw
 ```
+
+# Homework 6.
+
+**6.1.** Describe what are dictionaries in Python, how they work and why are they useful. Your homework should contain:
+- description of dictionary data type
+- cheatsheet containing basic and most useful operations on dictionaries (e.g. creating dictionary, retrieving data, changing, iterating, looking for items, etc.); cheatsheet may be in any form table, list of code snippets, etc.
+- one **example programming exercise** and solution of this exercise that makes use of dictionary
+
+> Please send solution as `.pdf` file named with your University index (e.g. `333333.pdf`)
