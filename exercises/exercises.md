@@ -211,3 +211,49 @@ peak([10, 20, 30, 40]) # should return -1
 # 6. Variables revisited
 
 **6.1.** Write a function `rotate(vector, angle)` that takes two parameters: `vector` which is tuple with 2 floats, and angle (in degrees) and returns coordinates of rotated vector. [Here](https://matthew-brett.github.io/teaching/rotation_2d.html) you can find formula for 2D rotation. Set default value of 0 degrees for angle parameter.
+
+# 7. Dictionaries, function testing
+
+**7.1.** Given following input data:
+```python
+from string import ascii_lowercase
+from itertools import product 
+from random import randint
+
+# map, lambda functions, string join method, product
+names = list(map(lambda x: ''.join(x), product(ascii_lowercase, repeat=3)))
+
+# list comprehension
+numbers = [f'{randint(0, b=999_999):06}' for _ in names]
+
+# dictionary comprehension, zip function
+phonebook = {k: v for k, v in zip(names, numbers)}
+```
+
+Write two functions `find_list` and `find_dict` which finds phone number for specific name required number of times. Each function should take two inputs:
+- three character name (e.g. `abc` and get, but not return or display, corresponding phone number)
+- operation of finding a number should be repeated `reps` number of times (default 10,000 times)
+
+**7.2.** Solve **5.4.** and **5.5.** from `lesson_05` using list comprehensions.
+
+**7.3.** Write a function `add_matrix` that accepts two matrices (n x m two dimensional arrays), and return the sum of the two. Both matrices being passed into the function will be represented as a list of the list.
+
+How to sum two matrices:
+
+Take each value `matrix_1[n][m]` from the first matrix, and add it with the same (corresponding) `matrix_2[n][m]` value from the second matrix. This will be a value `[n][m]` of the solution matrix.
+
+**7.4.** Extend function `add_matrix` and validate user provided matrices:
+- check if both inputs are lists (if not raise `TypeError`)
+- check if inner lists have equal lenght (if not raise `ValueError`)
+- check if both matrices have same size (if not raise `ValueError`)
+
+**7.5.** Use `assert` statement to test function `adjacent_element_products`.
+
+> When writing test try to predict *edge cases*, i.e. input combinations thate are likely to brake the function.
+
+**7.6.** Use `input` function to ask the user to input the number. Repeat asking until correct number is passed. If a user pass a string that cannot be converted to number, warn him with a message. If a correct number is passed print this number multiplied by 10.
+
+> You may need `.isnumeric()` string method
+
+**7.7.** Use `input` function again to ask the user to input the number. All rules stay the same, except now you want to use `try`, `except` statements to achieve the same result.
+

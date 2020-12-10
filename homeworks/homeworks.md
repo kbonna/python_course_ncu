@@ -270,3 +270,32 @@ who_win(board_3) # should return 'd' because there was a draw
 - one **example programming exercise** and solution of this exercise that makes use of dictionary
 
 > Please send solution as `.pdf` file named with your University index (e.g. `333333.pdf`)
+
+# Homework 7.
+
+**7.1.** You will be given a list of non-negative integers and positive integer bin width.
+
+Your task is to create the `histogram` function that will return histogram data corresponding to the input list. The histogram data is an array that stores under index i the count of numbers that belong to bin i. The first bin always starts with zero. Each bin has inclusive start and exclusive end. 
+
+For example if our list is `[0, 0, 0, 0, 1, 7, 9, 5, 1, 1, 2]` and our bin width is equal `3` then first bin will span from 0 (inclusive) to 3 (exclusive). In this range we have 4 x `0`, 3 x `1` and 1 x `2`, so the histogram value for the first bin will be 8. Second bin will span from 3 (inclusive) to 6 (exclusive) so the value for this bin will be 1 (there is only one `5` in the list). Third bin spanning from 6 to 9 (exclusive) will have a value of 1, and the last bin spanning from 9 (inclusive) to 12 (exclusive) will also have value of 1. Finally, the output should be `[8, 1, 1, 1]` 
+
+On empty input you should return empty output.
+
+More examples:
+
+- for input data [1, 1, 0, 1, 3, 2, 6] and `bin_width = 1` the result will be [1, 3, 1, 1, 0, 0, 1] as the data contains single element "0", 3 elements "1" etc.
+- for the same data and `bin_width = 2` the result will be [4, 2, 0, 1]
+- For input data [7] and `bin_width = 1` the result will be [0, 0, 0, 0, 0, 0, 0, 1]
+
+**7.2.** Given two lists of names and phone numbers write a function `phonebook(names, numbers)` that returns a dictionary with names as dictionary keys and phone numbers as their vallues. Befory putting a name and the number in dictionary they both have to be validated. Invalid entries should be discarder. 
+
+Valid name should contain only a-z letters, and start with capital letter, e.g. `Jack`, `Bob`, `Xayqyqy`. Invalid names are `bob`, `jelly120`, `1Tom`, etc. 
+
+Valid number should be a string formatted like this `568-975-645` or `(+45)550-654-999`. Both types (with and without area code) should be validated. Each area code has exactly two digits and starts with `+`. Examples of invalid numbers: `(+5)999-999-645` (because area code has one digit), `5559-654-654` (incorrect number of digits), `654 654 654` (incorrect separator between number parts), `69X-546-132` (incorrect character in number), etc.
+
+Some examples:
+```
+phonebook(['Bob', 'Kate', '1Tom'], ['555-555-555', '9654-654-654', '(+55)999-111-222']) # should return {'Bob': '555-555-555'} because second entry is discarded due to incorrect number and third entry is discarded due to incorrect name
+phonebook(['Yi', 'Fo', 'Min'], ['111-222-333', '(+00)999-888-777', '222_555-999']) # should reuturn {'Yi': '111-222-333', 'Fo': '(+00)999-888-777'} because third entry is discarded due to incorrect number
+phonebook(['jelly'], ['111-111-987']) # should return empty dict besause name is incorrect
+```
