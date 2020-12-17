@@ -325,3 +325,37 @@ phonebook(['Bob', 'Kate', '1Tom'], ['555-555-555', '9654-654-654', '(+55)999-111
 phonebook(['Yi', 'Fo', 'Min'], ['111-222-333', '(+00)999-888-777', '222_555-999']) # should reuturn {'Yi': '111-222-333', 'Fo': '(+00)999-888-777'} because third entry is discarded due to incorrect number
 phonebook(['jelly'], ['111-111-987']) # should return empty dict besause name is incorrect
 ```
+
+# Homework 8.
+
+**8.1.** [Hashing function](https://en.wikipedia.org/wiki/Hash_function) is often used to store encrypted passwords in database. One popular (yet not secure!) hashing algorithm is called [MD5](https://en.wikipedia.org/wiki/MD5). Your task is to crack a password being 4-digit number hashed with MD5 algorithm. Since they are not many combinations of 4-digit numbers, you can easily use brute force to acomplish this task. Write a function `crack(hash)` that takes an input `hash` which is 32 character string representation of a MD5 hash (written with hexadecimal characters).
+
+To generate a hash from a password or message use `hashlib` built-in library in Python:
+
+```python
+import hashlib
+
+password = "1234"
+hash = hashlib.md5(password.encode()).hexdigest() 
+```
+
+If you print `hash` to the console, you will see `'81dc9bdb52d04dc20036dbd8313ed055'` hash string. 
+
+In addition to writing correctly working `crack` function you should protect it against incorrect input:
+- raise `TypeError` if an input is not a string
+- raise `ValueError` if an input is a string, but is not valid hash string (does not contain 32 characters or contain illegal characters – hexadecimal representation only contains digits 0-9 and characters a-f).
+
+**8.2.** Write a helper function `wrap(text, tags)` which wraps a text in [HTML tags](https://en.wikipedia.org/wiki/HTML_element). Some examples:
+
+```python
+wrap('Hello', ['p', 'div', 'h1']) # should produce a string '<h1><div><p>Hello</p></div><h1>'
+wrap('Hello', []) # should produce a string 'Hello'
+wrap('Hi', ['h2', 'h3', 'p']) # should produce a string '<h2><h3><p>Hi</p></h3></h2>'
+wrap('', ['p']) # should produce a string '<p></p>'
+```
+
+Note that first tag in a list should be outer tag enclosing all other tags, and last tag in a list should be inner tag directly enclosing a text. For simplicity assume that allowed tags are `p` (paragraph), `div` (block level logical division) `h1`, `h2`, `h3`, `h4`, `h5`, `h6` (section headings). You should validate your inputs:
+- raise `TypeError` if `text` is not a string (although it can be empty string)
+- raise `TypeError` if `tags` is not a list (althought it can be empty list)
+- raise `ValueError` if an element of `tags` is not a valid tag (valid tags are `p`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`; each tag should be a string)
+
