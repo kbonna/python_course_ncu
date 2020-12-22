@@ -99,3 +99,42 @@ def test_who_win():
     inputs = [board_1, board_2, board_3, board_4]
     outputs = ['x', 'x', 'o', 'd']
     return inputs, outputs
+
+def test_histogram():
+    inputs = [
+        ([0, 0, 0, 0, 1, 7, 9, 5, 1, 1, 2], 3),
+        ([1, 1, 0, 1, 3, 2, 6], 1),
+        ([7], 1),
+        ([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 15], 10),
+        (list(range(100)), 10),
+        ([], 10),
+        ([0, 1], 2),
+    ]
+    outputs = [
+        [8, 1, 1, 1],
+        [1, 3, 1, 1, 0, 0, 1],
+        [0, 0, 0, 0, 0, 0, 0, 1],
+        [10, 1],
+        [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+        [],
+        [2],
+    ]
+    return inputs, outputs
+test_histogram = test_score(test_histogram, unpack=True)
+
+def test_phonebook():
+    inputs = [
+        (['A', 'b', 'Ce', 'dE', '1E', 'F1', 'Gie', 'Ha'], ['000-000-000'] * 8),
+        (['Aname', 'Bname', 'Cname', 'Dname', 'Ename', 'Fname'],
+         ['000-000-000', '0000-000-000', '(+00)000-000-000', '(+0)000-000-000',
+          '000-000-001', '000-0x0-000'])
+    ]
+    outputs = [
+        {'A': '000-000-000',
+         'Ce': '000-000-000',
+         'Gie': '000-000-000',
+         'Ha': '000-000-000'},
+        {'Aname': '000-000-000', 'Cname': '(+00)000-000-000', 'Ename': '000-000-001'}
+    ]
+    return inputs, outputs
+test_phonebook = test_score(test_phonebook, unpack=True)

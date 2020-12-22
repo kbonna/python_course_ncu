@@ -258,13 +258,13 @@ You may need:
 ```python
 board_1 = [['o', ' ', ' '],
            ['x', 'x', 'x'],
-           [' ', 'o', ' ']]] # here 'x' wins
+           [' ', 'o', ' ']] # here 'x' wins
 board_2 = [['o', ' ', ' '],
            ['x', 'o', 'x'],
-           [' ', 'x', 'o']]] # here 'o' wins
+           [' ', 'x', 'o']] # here 'o' wins
 board_3 = [['x', 'x', 'o'],
            ['o', 'x', 'x'],
-           ['x', 'o', 'o']]] # here there is a draw
+           ['x', 'o', 'o']] # here there is a draw
 ```
 
 For these inputs function should work like this:
@@ -344,6 +344,14 @@ If you print `hash` to the console, you will see `'81dc9bdb52d04dc20036dbd8313ed
 In addition to writing correctly working `crack` function you should protect it against incorrect input:
 - raise `TypeError` if an input is not a string
 - raise `ValueError` if an input is a string, but is not valid hash string (does not contain 32 characters or contain illegal characters – hexadecimal representation only contains digits 0-9 and characters a-f).
+
+Examples:
+```python
+crack('81dc9bdb52d04dc20036dbd8313ed055') # should return '1234'
+crack('959ab9a0695c467e7caf75431a872e5c') # should return '6481'
+crack(1) # should raise TypeError
+crack('959a') # should raise ValueError
+```
 
 **8.2.** Write a helper function `wrap(text, tags)` which wraps a text in [HTML tags](https://en.wikipedia.org/wiki/HTML_element). Some examples:
 
