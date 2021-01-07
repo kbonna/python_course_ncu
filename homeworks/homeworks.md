@@ -367,3 +367,44 @@ Note that first tag in a list should be outer tag enclosing all other tags, and 
 - raise `TypeError` if `tags` is not a list (althought it can be empty list)
 - raise `ValueError` if an element of `tags` is not a valid tag (valid tags are `p`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`; each tag should be a string)
 
+# Homework 9.
+
+**9.1.** Write a function `multiply_matrix(a, b)` which takes as an input two 2-D matrices of arbitrary size and returns new matrix being a product of [matrix multiplication](https://en.wikipedia.org/wiki/Matrix_multiplication) of `a` and `b`. For simplicity assume that input matrices are correct, i.e. they are valid list of lists containing only numbers. The only thing you need to check for are sizes of both matrices – for some sizes mutliplication is not possible.
+
+Assuming matrix `A` is of size `n_a x m_a` and matrix `B` is of size `n_b x m_b`, multiplication is possible only if `m_a == n_b`. If the operation is not possible due to incorrect matrix sizes, function should return `ValueError` with an appropriate message.
+
+Examples:
+```python
+a = [[ 1, 2, 3, 1 ],
+     [ 0, 2, 2, 1 ]]
+b = [[ 1, 0, 0 ],
+     [ 0, 2, 0 ],
+     [ 0, 3, 0 ],
+     [-2, 0, 4 ]]
+c = multiply_matrix(a, b)
+# c should be equal to 
+# [[ 3, 13, -4 ],
+#  [-2, 10,  4 ]]
+
+a = [[ 1, 2, 3, 1 ],
+     [ 0, 2, 2, 1 ]]
+b = [[ 1, 0, 0 ],
+     [ 0, 2, 0 ],
+     [-2, 0, 4 ]]
+c = multiply_matrix(a, b) # should raise ValueError because # of columns in a != # of rows in b
+```
+
+> You can use [online calulator](https://matrix.reshish.com/multiplication.php) to test your function.
+
+
+**9.2.** Write a function `linspace(start, stop, n)` which takes three integers start, stop and number as input and returns a list from start to stop with number total values in the list. All numbers in a list should be equally spaced between `start` and `stop`. Don't worry about input validation. Assume that `stop` is always greater than `start`.
+
+Examples: 
+```python
+linspace(1, 5, 0) = []
+linspace(1, 5, 1) = [1.0]
+linspace(1, 5, 2) = [1.0, 5.0]
+linspace(1, 5, 3) = [1.0, 3.0, 5.0]
+linspace(1, 5, 4) = [1.0, 2.333333333333333, 3.6666666666666665, 5.0]
+linspace(1, 5, 5) = [1.0, 2.0, 3.0, 4.0, 5.0]
+```
