@@ -336,16 +336,18 @@ To generate a hash from a password or message use `hashlib` built-in library in 
 import hashlib
 
 password = "1234"
-hash = hashlib.md5(password.encode()).hexdigest() 
+hash = hashlib.md5(password.encode()).hexdigest()
 ```
 
-If you print `hash` to the console, you will see `'81dc9bdb52d04dc20036dbd8313ed055'` hash string. 
+If you print `hash` to the console, you will see `'81dc9bdb52d04dc20036dbd8313ed055'` hash string.
 
 In addition to writing correctly working `crack` function you should protect it against incorrect input:
+
 - raise `TypeError` if an input is not a string
 - raise `ValueError` if an input is a string, but is not valid hash string (does not contain 32 characters or contain illegal characters – hexadecimal representation only contains digits 0-9 and characters a-f).
 
 Examples:
+
 ```python
 crack('81dc9bdb52d04dc20036dbd8313ed055') # should return '1234'
 crack('959ab9a0695c467e7caf75431a872e5c') # should return '6481'
@@ -356,13 +358,14 @@ crack('959a') # should raise ValueError
 **8.2.** Write a helper function `wrap(text, tags)` which wraps a text in [HTML tags](https://en.wikipedia.org/wiki/HTML_element). Some examples:
 
 ```python
-wrap('Hello', ['p', 'div', 'h1']) # should produce a string '<h1><div><p>Hello</p></div><h1>'
+wrap('Hello', ['p', 'div', 'h1']) # should produce a string '<p><div><h1>Hello</h1></div></p>'
 wrap('Hello', []) # should produce a string 'Hello'
 wrap('Hi', ['h2', 'h3', 'p']) # should produce a string '<h2><h3><p>Hi</p></h3></h2>'
 wrap('', ['p']) # should produce a string '<p></p>'
 ```
 
 Note that first tag in a list should be outer tag enclosing all other tags, and last tag in a list should be inner tag directly enclosing a text. For simplicity assume that allowed tags are `p` (paragraph), `div` (block level logical division) `h1`, `h2`, `h3`, `h4`, `h5`, `h6` (section headings). You should validate your inputs:
+
 - raise `TypeError` if `text` is not a string (although it can be empty string)
 - raise `TypeError` if `tags` is not a list (althought it can be empty list)
 - raise `ValueError` if an element of `tags` is not a valid tag (valid tags are `p`, `div`, `h1`, `h2`, `h3`, `h4`, `h5`, `h6`; each tag should be a string)
@@ -374,6 +377,7 @@ Note that first tag in a list should be outer tag enclosing all other tags, and 
 Assuming matrix `A` is of size `n_a x m_a` and matrix `B` is of size `n_b x m_b`, multiplication is possible only if `m_a == n_b`. If the operation is not possible due to incorrect matrix sizes, function should return `ValueError` with an appropriate message.
 
 Examples:
+
 ```python
 a = [[ 1, 2, 3, 1 ],
      [ 0, 2, 2, 1 ]]
@@ -382,9 +386,9 @@ b = [[ 1, 0, 0 ],
      [ 0, 3, 0 ],
      [-2, 0, 4 ]]
 c = multiply_matrix(a, b)
-# c should be equal to 
-# [[ 3, 13, -4 ],
-#  [-2, 10,  4 ]]
+# c should be equal to
+# [[ -1, 13, 4 ],
+#  [ -2, 10, 4 ]]
 
 a = [[ 1, 2, 3, 1 ],
      [ 0, 2, 2, 1 ]]
@@ -396,10 +400,10 @@ c = multiply_matrix(a, b) # should raise ValueError because # of columns in a !=
 
 > You can use [online calulator](https://matrix.reshish.com/multiplication.php) to test your function.
 
-
 **9.2.** Write a function `linspace(start, stop, n)` which takes three integers start, stop and number as input and returns a list from start to stop with number total values in the list. All numbers in a list should be equally spaced between `start` and `stop`. Don't worry about input validation. Assume that `stop` is always greater than `start`.
 
-Examples: 
+Examples:
+
 ```python
 linspace(1, 5, 0) = []
 linspace(1, 5, 1) = [1.0]
