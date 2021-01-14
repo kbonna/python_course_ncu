@@ -412,3 +412,39 @@ linspace(1, 5, 3) = [1.0, 3.0, 5.0]
 linspace(1, 5, 4) = [1.0, 2.333333333333333, 3.6666666666666665, 5.0]
 linspace(1, 5, 5) = [1.0, 2.0, 3.0, 4.0, 5.0]
 ```
+
+# Homework 10.
+
+**10.1.** Write a function `transpose(a)` that takes 2-D array (matrix) as an input and returns it's transpose. Keep the function pure – do not modify input matrix. [Matrix transposition](https://en.wikipedia.org/wiki/Transpose) swaps the columns and rows of the original matrix. Matrix will be represented as usual as a list of lists of numbers. You don't need to worry about input validation.
+
+Example:
+
+```python
+a = [[1, 2, 3],
+     [4, 5, 6]]
+a_t = transpose(a) # transposition of 2x3 matrix
+# should return 3x2 matrix
+# [[1, 4],
+#  [2, 5],
+#  [3, 5]]
+```
+
+**10.2** Write a function `tricky(l)` that **will pass** these **exact** tests:
+
+```python
+class TestTricky(unittest.TestCase):
+     def test_tricky(self):
+          self.assertEqual(tricky([2, 3, 3, 4, 5]), 10)
+          self.assertEqual(tricky([-2, -1, 2, 3]), -6)
+          self.assertEqual(tricky([0, 0, 0, 1]), 0)
+          self.assertEqual(tricky([1, 2, 3]), 3)
+          self.assertEqual(tricky([-1, 1]), -1)
+          self.assertEqual(tricky([5]), 25)
+
+          with self.assertRaises(ValueError):
+               tricky([])
+          with self.assertRaises(TypeError):
+               tricky('[1, 2, 3]')
+```
+
+> Hint: There are multiple approaches to this problem. As long as your function will pass required tests it is fine.
