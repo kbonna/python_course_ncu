@@ -1,8 +1,29 @@
 # 1. Basic types
 
-**1.1.** Write a simple script that asks user for the name and year of birth and print greeting and calculated age in one sentence.
+**1.1**
 
-**1.2.** Write a simple script that asks user for speed in km/h and converts into mph.
+Change code below so it automatically prints correct employee card. Play around with variables and see how it affects text inside card.
+
+```python
+first_name = "Jan"
+year_of_birth = 1990
+
+print("========= Employee card =========")
+print(f" Name: {first_name} {second_name}")
+print(f" E-mail: JanKowalski@company.com")
+print(f" Year Born: {year_of_birth}")
+print(f" Age: 31")
+```
+
+**1.2.**
+
+Write a simple script that asks user for the name, weight in kilograms and height in centimeters and calculates user's BMI.
+
+BMI formula:
+$$BMI=\frac{w}{h^2}$$
+where $w$ is weight in kilograms and $h$ is height **in meters**.
+
+**1.3.** Write a simple script that asks user for speed in km/h and converts into mph.
 
 # 2. Flow control
 
