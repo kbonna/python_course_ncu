@@ -1,8 +1,6 @@
 # 1. Basic types
 
-**1.1**
-
-Change code below so it automatically prints correct employee card. Play around with variables and see how it affects text inside card.
+**1.1** Change code below so it automatically prints correct employee card. Play around with variables and see how it affects text inside card.
 
 ```python
 first_name = "Jan"
@@ -15,13 +13,9 @@ print(f" Year Born: {year_of_birth}")
 print(f" Age: 31")
 ```
 
-**1.2.**
+**1.2.** Write a simple script that asks user for the name, weight in kilograms and height in centimeters and calculates user's BMI.
 
-Write a simple script that asks user for the name, weight in kilograms and height in centimeters and calculates user's BMI.
-
-BMI formula:
-$$BMI=\frac{w}{h^2}$$
-where $w$ is weight in kilograms and $h$ is height **in meters**.
+BMI formula: `bmi = w / h ** 2`, where `w` is weight in kilograms and `h` is height **in meters**.
 
 **1.3.** Write a simple script that asks user for speed in km/h and converts into mph.
 
