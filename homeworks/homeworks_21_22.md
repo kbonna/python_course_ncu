@@ -36,6 +36,6 @@ Examples:
 
 ```python
 quadratic_solutions(2, 1, 1) # should return 0
-quadratic_solutions(4, 2, 1) # should return 1
+quadratic_solutions(1, 2, 1) # should return 1
 quadratic_solutions(1, 5, 1) # should return 2
 ```
