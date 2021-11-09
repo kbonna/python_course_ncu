@@ -8,7 +8,8 @@
    > Note 2. **Each file should contain only solution function.**
 3. Put all of your solutions in the folder named with your index number. For example, if your University index number is 333444, folder should be named `333444`.
 4. Compress your files using zip extension (without password protection). Finally your file should be `333444.zip`.
-
+5. Send solutions to **python.at.ncu@gmail.com**
+ 
 For example if your index is 333444 and you are sending solutions for the first homework your files should have structure (after unzipping `333444.zip`):
 
 ```
@@ -35,7 +36,7 @@ Examples:
 
 ```python
 quadratic_solutions(2, 1, 1) # should return 0
-quadratic_solutions(4, 2, 1) # should return 1
+quadratic_solutions(1, 2, 1) # should return 1
 quadratic_solutions(1, 5, 1) # should return 2
 ```
 
