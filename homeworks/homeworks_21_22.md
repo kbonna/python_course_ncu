@@ -38,3 +38,25 @@ quadratic_solutions(2, 1, 1) # should return 0
 quadratic_solutions(4, 2, 1) # should return 1
 quadratic_solutions(1, 5, 1) # should return 2
 ```
+
+# Homework 2.
+
+**2.1.** Write a function `full_price(price, tax)` that calculates full price of a product including tax. New full price should be calculated as `p + tax * p`. Products cheaper than `100` should not be taxed so for them full price is equal to initial price. Assume default tax value as 10 percent. Tax will be a number between 0 (0%) and 1 (100%).
+
+Examples:
+
+```python
+full_price(50, tax=0.5) # should return 50 because products under 100 are not taxed
+full_price(200, tax=0.5) # should return 300
+full_price(200) # should return 220 because default tax is 10%
+```
+
+**2.2.** Write a function `max_weight(heigth_in_cm)` that return maximum normal BMI weight for a person `height_in_cm` tall. Assume maximum normal BMI is 25. Function should raise `ValueError` if `height_in_cm` is not positive number.  
+
+Examples:
+
+```python
+max_weight(180) # should return 81.0
+max_weight(150) # should return 56.25
+max_weight(-50) # should raise ValueError
+```
