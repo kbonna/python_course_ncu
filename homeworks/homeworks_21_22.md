@@ -30,7 +30,7 @@ higher(0, 1, 1) # should return 2
 higher(2, 3, 4) # should return 24
 ```
 
-**1.2.** Write a function `quadratic_solutions(a, b, c)` that takes as an input three coefficients of quadratic equation `f(x)=ax^2+bx+c` and return number of solutions. Three return values should be possible: 0, 1, and 2.
+**1.2.** Write a function `quadratic_solutions(a, b, c)` that takes as an input three coefficients of quadratic equation `f(x)=ax^2+bx+c` and return number of solutions. Three return values should be possible: 0, 1, and 2. Assume that a is always nonzero.
 
 Examples:
 
