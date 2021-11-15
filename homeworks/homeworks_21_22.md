@@ -18,6 +18,42 @@ For example if your index is 333444 and you are sending solutions for the first 
 └── 1_2.py
 ```
 
+# Checklist before sending homework
+
+- [ ] Do my files contain **ONLY** solution function?
+ 
+```python
+# This is OK!
+def sum_function(a, b):
+    return a + b
+```
+```python
+# This is NOT OK!
+def sum_function(a, b):
+    return a + b
+a = float(input("a?"))
+b = float(input("b?"))
+sum_function(a, b)
+```
+- [ ] Do my files have correct names? (`1_1.py` is correct, whereas `1.1.py` or `1-1.py` are not)
+- [ ] Are my files placed in a directory named with my index number **before compression**? If so, make sure to compress **entire folder** and not only files within!
+
+```
+# This is correct structure before compression
+333444
+├── 1_1.py
+└── 1_2.py
+```
+```
+# This is incorrect structure before compression, index directory is missing
+├── 1_1.py
+└── 1_2.py
+```
+
+- [ ] Am I using correct compression format? (`.zip` is correct, whereas `.rar` is not)
+- [ ] Am I sending my homework to correct address? (python.at.ncu@gmail.com)
+
+
 # Homework 1.
 
 **1.1.** Write a function `higher(a, b, c)` that calculates sum and product of three numbers and return higher value as an output. Function should accept as an input three real numbers `a`, `b`, `c` represented as floats and returns higer of the two: `a + b + c` or `a * b * c`.
