@@ -10,7 +10,7 @@
 3. Put all of your solutions in the folder named with your index number. For example, if your University index number is 333444, folder should be named `333444`.
 4. Compress your files using zip extension (without password protection). Finally your file should be `333444.zip`.
   
-   > Note. **Make sure to compress entire folder, not only solution files.** You can double-check that by unzipping your archive – you should see your index folder and not solution files.
+   > Note. **Make sure to compress entire folder, not only solution files.** You can double-check that by opening your archive – you should see your index folder and not solution files.
 
 5. Send solutions to **python.at.ncu@gmail.com**. Your e-mail title should be `Homework <homework_number>`, e.g. `Homework 1`.
 
