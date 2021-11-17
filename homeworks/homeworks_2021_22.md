@@ -64,13 +64,13 @@ max_weight(-50) # should raise ValueError
 
 # Homework 3.
 
-**3.1.** Write a function `arithmetic(a_1, d, n)` which calculates sum of `n` first terms of arithmetic progression $a_n=a_1+(n-1)d$. For example arithmetic progression with `a_1=5` and `d=2` will be an infinite sequence (5, 7, 9, 11, 13, ...). Sum of `n=4` first elements of that sequence is 5+7+9+11=32, therefore `arithmetic(5, 2, 4)` should return number `32`. Assume that `d` is always positive, and `n` is a positive integer greater than 0.
+**3.1.** Write a function `arithmetic(a_1, d, n)` which calculates sum of `n` first terms of arithmetic progression a_n=a_1+(n-1)d. For example arithmetic progression with `a_1=5` and `d=2` will be an infinite sequence (5, 7, 9, 11, 13, ...). Sum of `n=4` first elements of that sequence is 5+7+9+11=32, therefore `arithmetic(5, 2, 4)` should return number `32`. Assume that `d` is always positive, and `n` is a positive integer greater than 0.
 
 Examples:
 
 ```python
 arithmetic(5, 2, 4) # should return 32 (because 5 + 7 + 9 + 11 = 32)
-arithmetic(0, 1, 10) # should return 45 (because 0 + 1 + 2 + ... + = 45)
+arithmetic(0, 1, 10) # should return 45 (because 0 + 1 + 2 + ... + 9 = 45)
 arithmetic(100, 10, 2) # should return 220 (because 100 + 110 = 220)
 ```
 
