@@ -2,14 +2,15 @@
 
 1. Create solutions for your tasks.
 2. Put each solution function in a separate python file named `<homework_number>_<task_number>.py`. For example solution for the task **3.1.** should be placed in a file `3_1.py`.
-   
+
    > Note 1. **Your solution function should be named as task requires!**
-   
+
    > Note 2. **Each file should contain only solution function.**
+
 3. Put all of your solutions in the folder named with your index number. For example, if your University index number is 333444, folder should be named `333444`.
 4. Compress your files using zip extension (without password protection). Finally your file should be `333444.zip`.
 5. Send solutions to **python.at.ncu@gmail.com**
- 
+
 For example if your index is 333444 and you are sending solutions for the first homework your files should have structure (after unzipping `333444.zip`):
 
 ```
@@ -52,7 +53,7 @@ full_price(200, tax=0.5) # should return 300
 full_price(200) # should return 220 because default tax is 10%
 ```
 
-**2.2.** Write a function `max_weight(heigth_in_cm)` that return maximum normal BMI weight for a person `height_in_cm` tall. Assume maximum normal BMI is 25. Function should raise `ValueError` if `height_in_cm` is not positive number.  
+**2.2.** Write a function `max_weight(heigth_in_cm)` that return maximum normal BMI weight for a person `height_in_cm` tall. Assume maximum normal BMI is 25. Function should raise `ValueError` if `height_in_cm` is not positive number.
 
 Examples:
 
@@ -64,13 +65,13 @@ max_weight(-50) # should raise ValueError
 
 # Homework 3.
 
-**3.1.** Write a function `arithmetic(a_1, d, n)` which calculates sum of `n` first terms of arithmetic progression $a_n=a_1+(n-1)d$. For example arithmetic progression with `a_1=5` and `d=2` will be an infinite sequence (5, 7, 9, 11, 13, ...). Sum of `n=4` first elements of that sequence is 5+7+9+11=32, therefore `arithmetic(5, 2, 4)` should return number `32`. Assume that `d` is always positive, and `n` is a positive integer greater than 0.
+**3.1.** Write a function `arithmetic(a_1, d, n)` which calculates sum of `n` first terms of arithmetic progression a_n=a_1+(n-1)d. For example arithmetic progression with `a_1=5` and `d=2` will be an infinite sequence (5, 7, 9, 11, 13, ...). Sum of `n=4` first elements of that sequence is 5+7+9+11=32, therefore `arithmetic(5, 2, 4)` should return number `32`. Assume that `d` is always positive, and `n` is a positive integer greater than 0.
 
 Examples:
 
 ```python
 arithmetic(5, 2, 4) # should return 32 (because 5 + 7 + 9 + 11 = 32)
-arithmetic(0, 1, 10) # should return 45 (because 0 + 1 + 2 + ... + = 45)
+arithmetic(0, 1, 10) # should return 45 (because 0 + 1 + 2 + ... + 9 = 45)
 arithmetic(100, 10, 2) # should return 220 (because 100 + 110 = 220)
 ```
 
@@ -81,7 +82,7 @@ Examples:
 ```python
 custom_sum(5, odd=True) # should return 9 (because 1 + 3 + 5 = 9)
 custom_sum(9, odd=False) # should return 20 (because 2 + 4 + 6 + 8 = 20)
-custom_sum(5) # should return 6 (because 2 + 4 = 6 and odd is False by default) 
+custom_sum(5) # should return 6 (because 2 + 4 = 6 and odd is False by default)
 ```
 
 # Homework 4
@@ -93,7 +94,7 @@ custom_sum(5) # should return 6 (because 2 + 4 = 6 and odd is False by default)
       R B
      B G R
     R G G B
-   G B R B B 
+   G B R B B
   R B B G R G
  B G R G G B R
 R G G B R B B G
