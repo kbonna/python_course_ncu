@@ -72,7 +72,7 @@ Examples:
 ```python
 arithmetic(5, 2, 4) # should return 32 (because 5 + 7 + 9 + 11 = 32)
 arithmetic(0, 1, 10) # should return 45 (because 0 + 1 + 2 + ... + 9 = 45)
-arithmetic(100, 10, 2) # should return 220 (because 100 + 110 = 220)
+arithmetic(100, 10, 2) # should return 210 (because 100 + 110 = 210)
 ```
 
 **3.2.** Write a function `custom_sum(n, odd)` that calculates sum of integers less or equal to `n` that are **even or odd**. `odd` argument is a boolean determining if sum of odd or even numbers should be calculated. Assume that `n` is a positive integer greater than 0 and `odd` is either `True` or `False`. `odd` argument should have default value `False`.
