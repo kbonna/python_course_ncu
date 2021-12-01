@@ -110,3 +110,46 @@ color_pyramid("RG") # should return "B"
 color_pyramid("RGB") # should return "G"
 color_pyramid("RGGBRBBG") # should return "G"
 ```
+
+# Homework 5
+
+**5.1.** Write a function `christmas_tree(height)` that **returns a string** that printed to the console looks like a christmas tree with certain height (height is a number of tree layes without root). Each layer of tree should have the same amount of characters. Only one string should be returned. To go to the next line use newline character `\n`. Last character of the returned string should be a newline character.
+
+**NOTE** Your function should return string, and not print christmas tree.
+
+Examples of christmas trees of height 1, 3, and 5:
+```
+#
+| 
+```
+```
+  #  
+ ### 
+#####
+  |  
+```
+```
+    #    
+   ###   
+  #####  
+ ####### 
+#########
+    |    
+```
+
+Denoting spaces as `s` and newline characters as `n` your tree should look like this:
+```
+ssss#ssssn    
+sss###sssn  
+ss#####ssn
+s#######sn
+#########n
+ssss|ssssn   
+```
+
+Examples:
+```python
+christmas_tree(1) # should return string "#\n|\n"
+christmas_tree(3) # should return string "  #  \n ### \n#####\n  |  \n"
+christmas_tree(3) # should return string "    #    \n   ###   \n  #####  \n ####### \n#########\n    |    \n"
+```
