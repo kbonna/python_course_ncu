@@ -151,5 +151,5 @@ Examples:
 ```python
 christmas_tree(1) # should return string "#\n|\n"
 christmas_tree(3) # should return string "  #  \n ### \n#####\n  |  \n"
-christmas_tree(3) # should return string "    #    \n   ###   \n  #####  \n ####### \n#########\n    |    \n"
+christmas_tree(5) # should return string "    #    \n   ###   \n  #####  \n ####### \n#########\n    |    \n"
 ```
