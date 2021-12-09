@@ -153,3 +153,32 @@ christmas_tree(1) # should return string "#\n|\n"
 christmas_tree(3) # should return string "  #  \n ### \n#####\n  |  \n"
 christmas_tree(5) # should return string "    #    \n   ###   \n  #####  \n ####### \n#########\n    |    \n"
 ```
+
+# Homework 6
+
+**6.1.** Write a function `avg_summer_temp(temps)` that accept a list containing strings with the information about monthly temperatures and return average temperature during summer months (june, july and august). Each entry in the `temps` list will be a string consisting of:
+- first three letters of a month, 
+- colon, 
+- temperature for a given month.
+
+For example `"jan:-1.8"` would represent temperature of -1.8 degrees in January, `"apr:8.7"` would represent temperature of 8.7 degrees in April, and so on. 
+
+Test example:
+```python
+temps = [
+    "jan:-1.8",
+    "feb:-0.6",
+    "mar:2.8",
+    "apr:8.7",
+    "may:14.2",
+    "jun:17.0",
+    "jul:19.2",
+    "aug:18.3",
+    "sep:13.5",
+    "oct:8.5",
+    "nov:3.3",
+    "dec:-0.7",
+]
+
+avg_summer_temp(temps) # should return 18.166666666666668, because this is the average of 17.0, 19.2 and 18.3
+```
