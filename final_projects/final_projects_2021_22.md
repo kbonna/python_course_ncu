@@ -72,15 +72,15 @@ subscriptions 200     689.07  489.07      6       4           17.01.2020
 - [ ] Create a function that nicely formats output table and fill it given calculated data
 - [ ] Create a function that saves formatted summary into a file
 
-# Project 2 "Gomoku"
+# Project 2 "Tic-Tac-Toe"
 
 ### Description
 
-Create ["Gomoku" game](https://pl.wikipedia.org/wiki/Gomoku) using Python. You should code game interactions, validation of inserted moves, artificial opponent for a player and mechanism determining if the game is over.
+Create ["Tic-Tac-Toe" game](https://en.wikipedia.org/wiki/Tic-tac-toe) using Python. You should code game interactions, validation of inserted moves, artificial opponent for a player and mechanism determining if the game is over.
 
 ### Requirements
 
-- user should be able to choose black or white marbles (or circles/crosses in another version)
+- user should be able to choose Xs or Os 
 - user should have the visual representation of the board before he makes a move
 - user input should be validates, so invalid input cannot break the game
 - computer should respond after each move with its own move
