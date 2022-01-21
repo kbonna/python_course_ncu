@@ -217,3 +217,16 @@ random_walker("s:5")                   # should return [0, -5]
 random_walker("s:5,n:7,s:3,s:1,e:100") # should return [100, -2]
 ```
 
+# Homework 9
+
+**9.1.** Write a helper function `wrap(text, tags)` which wraps a text in [HTML tags](https://en.wikipedia.org/wiki/HTML_element). Text is always a string and tags is a list of strings (possibly empty) representing different HTML tags. 
+
+Examples:
+```python
+wrap("Hello", ["p", "div", "h1"])   # should produce a string "<p><div><h1>Hello</h1></div></p>"
+wrap("Hello", [])                   # should produce a string "Hello"
+wrap("Hi", ["h2", "h3", "p"])       # should produce a string "<h2><h3><p>Hi</p></h3></h2>"
+wrap("", ["p"])                     # should produce a string "<p></p>"
+```
+
+Note that first tag in a list should be outer tag enclosing all other tags, and last tag in a list should be inner tag directly enclosing a text.
