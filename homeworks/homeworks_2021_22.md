@@ -194,5 +194,26 @@ electron_configuration(10) # should return [2, 8]
 electron_configuration(11) # should return [2, 8, 1]
 electron_configuration(47) # should return [2, 8, 18, 19]
 ```
-    
+# Homework 8
+
+**8.1.** Write a function `random_walker(instructions)` that accept a set of instructions for a walk on a 2D grid and return final position of an object. Instructions will always be a *single string* with instructions separated with commas. Single instruction will always consist of a direction: `n` for north, `e` for east, `s` for south, and `w` for west, then a colon `:`, and then integer value denoting distance. Example instructions string can be `"e:7,w:8,s:1,s:2,s:5,n:10"`, which means, that for an object starting in position (x=0, y=0):
+- go east for 7 units of distance (position after move is (x=7, y=0))
+- then go west for 8 units of distance (position after move is (x=-1, y=0))
+- then go south for 1 unit of distance (position after move is (x=-1, y=-1))
+- then go south for 2 units of distance (position after move is (x=-1, y=-3))
+- then go south for 5 units of distance (position after move is (x=-1, y=-8))
+- then go north for 10 units of distance (position after move is (x=-1, y=2))
+
+So the final position of the object is (x=-1, y=2), therefore `random_walker("e:7,w:8,s:1,s:2,s:5,n:10")` should return a list `[-1, 2]`. Initial position of an object should always be (x=0, y=0). X-axis corresponds to west-east direction with east direction pointing towards increasing values of x, and Y-axis corresponds to north-south direction with north direction pointing towards increasing values of y (like on the map).
+> Hint. To split instuctions string into single instructions you can use `instructions.split(",")`, and to split single instruction into direction and distance you can use `instruction.split(":")`.
+
+Examples:
+```python
+random_walker("")                      # should return [0, 0] (initial position)
+random_walker("n:5")                   # should return [0, 5]
+random_walker("n:5,e:2")               # should return [2, 5]
+random_walker("n:5,e:2,w:2")           # should return [0, 5]
+random_walker("s:5")                   # should return [0, -5]
+random_walker("s:5,n:7,s:3,s:1,e:100") # should return [100, -2]
+```
 
