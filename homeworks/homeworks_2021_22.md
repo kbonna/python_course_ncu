@@ -230,3 +230,16 @@ wrap("", ["p"])                     # should produce a string "<p></p>"
 ```
 
 Note that first tag in a list should be outer tag enclosing all other tags, and last tag in a list should be inner tag directly enclosing a text.
+
+# Homework 10
+
+**10.1.** Create a function `swap_dict(d)` which takes as an input a dictionary, `d`, where all keys and values are either integers or strings and return a new dictionary in which keys from `d` become values, and values become keys. Note that integers can be used as dictionary keys. Function should return `TypeError` for input values other than dictionaries.
+
+Examples:
+```python
+swap_dict({5: "value"})          # should return {"value": 5}
+swap_dict({"a": "b", "c": "d"})  # should return {"b": "a", "d": "c"}
+swap_dict({})                    # should return {}
+swap_dict([1, 2, 3])             # should raise TypeError
+swap_dict(5)                     # should raise TypeError
+```
